@@ -24,5 +24,5 @@ jobs:
       - name: Merge master into testing
         run: |
           git checkout testing
-          git merge masterc --allow-unrelated-histories
+          git merge master --allow-unrelated-histories
           git push origin testing
