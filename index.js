@@ -15,6 +15,7 @@ const connection = mysql.createConnection({
 function Testing() {
   return 0;
 }
+Testing();
 app.listen(8080, () => {
   console.log("connected to backend");
 });
