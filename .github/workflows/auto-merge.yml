@@ -1,0 +1,28 @@
+name: Auto Merge Master to Testing
+
+on:
+  push:
+    branches:
+      -
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'shiva221324'
+          git config --global user.email 'tsivavenkatkumar@gmail.com'
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Merge master into testing
+        run: |
+          git checkout testing
+          git merge master
+          git push origin testing
