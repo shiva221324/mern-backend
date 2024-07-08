@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
   password: process.env.DB_PASSWORD,
 });
 function Testing() {
-  return 0;
+  return 1;
 }
 Testing();
 app.listen(8080, () => {
