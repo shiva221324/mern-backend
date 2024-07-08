@@ -12,7 +12,9 @@ const connection = mysql.createConnection({
   database: process.env.DB_DATABASE,
   password: process.env.DB_PASSWORD,
 });
-
+function Testing() {
+  return 0;
+}
 app.listen(8080, () => {
   console.log("connected to backend");
 });
